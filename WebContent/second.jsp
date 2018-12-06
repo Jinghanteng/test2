@@ -1,6 +1,25 @@
 <%@page import="java.util.Date"%>
+
+<%-- jsp的指令
+<%@
+
+指令名称  属性
+%>
+1.page指令  对当前界面的属性设置
+2.include指令
+3.taglib指令
+
+page指令属性：
+language：语言
+contenttype：相应地编码格式和文本类型
+pageEncoding：页面编码格式
+buffer：jspWriter缓冲区 默认为8K
+errorpage：错误界面
+import:导包
+session:界面是否提供session
+ --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" errorPage="error.html" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +33,7 @@
 	<%-- 
 	jsp写Java代码的三种语法
 	1.jsp声明<%! %>  放在Java类里面     只执行一次
-	只能写声明变量，声明方法，不能写代码块
+	只能写声明变量，声明方法，不能写代码块  
 	2.jsp脚本<% %>   service（）方法里面      每次运行都执行一次
 		只能写代码片段，不能定义方法
 		3.jsp表达式<%= %>   方法的参数可以掉方法但必须有返回值
@@ -35,11 +54,12 @@
 	  public void test(){
 
 	  }
-	 
 	 %>
 	
 	 
 	 <%
+	 
+	 //int b=10/0;
 	 count++;
 	 int a=20;
 	 test();

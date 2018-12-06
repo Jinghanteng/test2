@@ -35,7 +35,7 @@ public class OneSession extends HttpServlet {
 				//存数据
 				session.setAttribute("username", "张三");
 				//替换的功能
-				session.setAttribute("username", "李四");
+//				session.setAttribute("username", "李四");
 				//删除Attribute
 				session.removeAttribute("name");
 				//设置session的过期时间
